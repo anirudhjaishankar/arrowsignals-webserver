@@ -1,0 +1,198 @@
+<mxfile host="app.diagrams.net" modified="2023-05-14T05:18:41.512Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="3o3PXJou46uyujnCEPFM" version="21.3.0" type="device">
+  <diagram id="ikWgd3Nj-K1ApDRW16W7" name="Page-1">
+    <mxGraphModel dx="1195" dy="637" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-1" value="&lt;h1&gt;Requirements&lt;br&gt;&lt;/h1&gt;&lt;div&gt;1. Payment Integration&lt;/div&gt;&lt;div&gt;2. User/Admin Analytics&lt;/div&gt;&lt;div&gt;3. Realtime updates&lt;br&gt;4. Client - Angular/Flutter&lt;br&gt;5. Server - Express and SSE&lt;br&gt;6. Database - MySQL&lt;/div&gt;&lt;div&gt;7. Upcoming user payments - Admin/ Remind Use about payment&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="170" y="20" width="190" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-2" value="Signals" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="630" width="200" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-4" value="SignalId PK&lt;br&gt;CatergoryId&lt;br&gt;MarketId&lt;br&gt;LTP/Current&lt;br&gt;Target1&lt;br&gt;Target2&lt;br&gt;Target3&lt;br&gt;Expected&lt;br&gt;Actual&lt;br&gt;isBuy&lt;br&gt;Quantity&lt;br&gt;StopLoss&lt;br&gt;Remarks" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="Jh0wafq3Ugy5In_K3ItY-2" vertex="1">
+          <mxGeometry x="10" y="30" width="180" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-5" value="Markets" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="630" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-6" value="MarketId - PK&lt;br&gt;MarketName&lt;br&gt;Currency&lt;br&gt;Country" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="Jh0wafq3Ugy5In_K3ItY-5" vertex="1">
+          <mxGeometry x="10" y="30" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-7" value="Categories" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="630" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-8" value="CatergoryId - PK&lt;br&gt;Name&lt;br&gt;MarketId&lt;br&gt;IsActive" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="Jh0wafq3Ugy5In_K3ItY-7" vertex="1">
+          <mxGeometry x="9" y="29" width="180" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-9" value="User" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="320" width="200" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-10" value="UserId PK&lt;br&gt;Email&lt;br&gt;Username&lt;br&gt;Password&lt;br&gt;Image&lt;br&gt;ValidUnit&lt;br&gt;isActive&lt;br&gt;Country&lt;br&gt;Phone number" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="Jh0wafq3Ugy5In_K3ItY-9" vertex="1">
+          <mxGeometry x="10" y="30" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-11" value="Payments" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="325" y="320" width="200" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-12" value="PaymentId PK&lt;br&gt;TransactionId - FK - E&lt;br&gt;PlanId - FK - I&lt;br&gt;PaymentDate&lt;br&gt;Status&lt;br&gt;UserId - FK - I" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="Jh0wafq3Ugy5In_K3ItY-11" vertex="1">
+          <mxGeometry x="10" y="30" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-13" value="Plans" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="320" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Jh0wafq3Ugy5In_K3ItY-14" value="PlanId&lt;br&gt;Price&lt;br&gt;Duration&lt;br&gt;Currency" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="Jh0wafq3Ugy5In_K3ItY-13" vertex="1">
+          <mxGeometry x="9" y="29" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="biEfmpU6-qcsZoszQxy8-1" value="&lt;h1&gt;1. Payment Integration&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Indian and International clients&lt;/li&gt;&lt;li&gt;Refund within 7days of purchase of subscription&lt;br&gt;&lt;/li&gt;&lt;li&gt;Plans - For all the information on the app&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Monthly - Rs 4999 - $59.99&lt;br&gt;&lt;/li&gt;&lt;li&gt;Quarterly - 14999 - 179.99&lt;br&gt;10% Discount - 13499 - 161.99&lt;/li&gt;&lt;li&gt;Half yearly - 29999 - 359.99&lt;br&gt;Discounted - 26999 - 324.99&lt;/li&gt;&lt;li&gt;Annual - 59999 - 729.99&lt;br&gt;Discounted - 53999 - 657.00&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Indian Payment gateway&amp;nbsp; - Razorpay&lt;br&gt;International payment gateway - Paypal&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="930" width="500" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="biEfmpU6-qcsZoszQxy8-2" value="&lt;h1&gt;2. Call analytics&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Full calls analysis and daily, monthly and yearly report generation.&lt;/li&gt;&lt;li&gt;Analysis based on call success updated by the admin with proof&lt;/li&gt;&lt;li&gt;Category based profit calculation&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="1180" width="500" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="biEfmpU6-qcsZoszQxy8-3" value="&lt;h1&gt;3. Realtime updates&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Instantly update call to end user and send push notification based on user settings&lt;/li&gt;&lt;li&gt;Full calls analysis and daily, monthly, and yearly report generation.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="1300" width="500" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="biEfmpU6-qcsZoszQxy8-4" value="&lt;h1&gt;4. Tech stack&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Mobile client - Flutter&lt;br&gt;&lt;/li&gt;&lt;li&gt;Web client - Angular&lt;/li&gt;&lt;li&gt;Server - Nodejs&lt;br&gt;&lt;/li&gt;&lt;li&gt;Database - MySQL&lt;br&gt;&lt;/li&gt;&lt;li&gt;Cache - Redis (TBD)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="1420" width="500" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="biEfmpU6-qcsZoszQxy8-5" value="&lt;h1&gt;5. User dashboard&amp;nbsp;&amp;nbsp;&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Analysis success rate&lt;br&gt;&lt;/li&gt;&lt;li&gt;Customizable user dashboard&lt;/li&gt;&lt;li&gt;Check markets and categories&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="1585" width="500" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="biEfmpU6-qcsZoszQxy8-6" value="Eg Commodity, Stock, Forex" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="580" y="740" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="biEfmpU6-qcsZoszQxy8-7" value="Eg NSE, NASDAQ, S&amp;amp;P 500" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="320" y="740" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="biEfmpU6-qcsZoszQxy8-9" value="&lt;h1&gt;6. User onboarding&amp;nbsp;&amp;nbsp;&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;EmailId and Phone number OTP&lt;/li&gt;&lt;li&gt;Personalise dashboard&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="1715" width="500" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-1" value="Absolute set of required functionalities" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="193" y="2110" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-2" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. Authentication&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. User creation&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;3. Payment integration&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;4. Get calls/tips instantly - user POV&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;5. Create calls and tips - admin POV&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="193" y="2140" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-4" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="308" y="2730" as="sourcePoint" />
+            <mxPoint x="308" y="2400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="308" y="2480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-5" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="628" y="2730" as="sourcePoint" />
+            <mxPoint x="628" y="2400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="628" y="2480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-6" value="Client" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="278" y="2360" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-7" value="Server" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="598" y="2360" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-8" value="2. user signup" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="378" y="2300" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="2450" as="sourcePoint" />
+            <mxPoint x="600" y="2450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5Q6nDr27Swku9WHVZIJ1-11" target="5Q6nDr27Swku9WHVZIJ1-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="2425" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-11" value="user form" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="418" y="2420" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-12" value="&lt;h1&gt;7. Admin dashboard&amp;nbsp;&amp;nbsp;&lt;/h1&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Update the status of calls&lt;/li&gt;&lt;li&gt;Show user accounts that are going to expire soon&lt;/li&gt;&lt;li&gt;User details&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1830" width="500" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-14" value="Name&lt;br&gt;Email&lt;br&gt;Password&lt;br&gt;Confirm password" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="10" y="2355" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-15" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="2540" as="sourcePoint" />
+            <mxPoint x="600" y="2540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-16" value="Mobile number/OTP authentication" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="355" y="2510" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-17" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="2620" as="sourcePoint" />
+            <mxPoint x="320" y="2620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-18" value="Login free trial user" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="2590" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-19" value="3. Realtime updates - User perspective" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="359" y="2810" width="218" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-23" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="3200" as="sourcePoint" />
+            <mxPoint x="320" y="2880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-24" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="3200" as="sourcePoint" />
+            <mxPoint x="640" y="2880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-25" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="2920" as="sourcePoint" />
+            <mxPoint x="600" y="2920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-26" value="Register user device to server" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="395" y="2890" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-27" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="3000" as="sourcePoint" />
+            <mxPoint x="360" y="3000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-28" value="Call 1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="445" y="2968" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-29" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="598" y="3050" as="sourcePoint" />
+            <mxPoint x="358" y="3050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-30" value="Call 2" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="445" y="3020" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-31" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="3102" as="sourcePoint" />
+            <mxPoint x="360" y="3100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-32" value="Call 3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="448" y="3070" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5Q6nDr27Swku9WHVZIJ1-33" value="Do more research on this" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="2978" width="160" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,57 @@
+auth routes
+
+POST /auth/register-user
+POST /auth/send-otp
+    to = email / phone
+    type = authentication / registration
+POST /auth/login
+POST /auth/logout
+POST /auth/verify-otp
+    from = email / phone
+    type = authentication / registration
+GET /auth/token/refresh
+POST /auth/delete-otp
+
+user routes
+
+GET /user/email?q=x
+GET /user/phone-number?q=x
+
+USER
+
+_id
+name
+email_id
+phone_number
+password
+password_salt
+identity_verified
+role
+is_active
+is_deleted
+history
+
+OTP
+
+_id
+user_id
+otp
+created_at
+type
+source
+is_deleted
+
+ROLE
+
+_id
+name
+
+AUTH_TOKEN
+
+_id
+type
+token
+user_id
+created_at
+finger_print
+is_deleted
